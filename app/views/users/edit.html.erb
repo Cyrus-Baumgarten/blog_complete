@@ -1,2 +1,21 @@
+<p>Edit Your Profile</p>
+
+
+<%= form_for @user do |f| %>
+<br>
+<%= f.label :name, "Username" %>
+<%= f.text_field :name %>
+<br>
+<%= f.label :image_url, "Avatar Link" %>
+<%= f.text_field :image_url %>
+<br>
+<%= f.label :subscribe, "Recieve emails when new posts are made?" %>
+<%= f.check_box :subscribe, default: false %>
+<br>
+<%= f.submit "Submit" %>
+
+<% end %>
+
+
 <h1>Users#edit</h1>
 <p>Find me in app/views/users/edit.html.erb</p>
