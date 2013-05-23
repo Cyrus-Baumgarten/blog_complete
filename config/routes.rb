@@ -1,39 +1,14 @@
 Blog::Application.routes.draw do
   
-  get "comments/create"
-
-  get "comments/edit"
-
-  get "comments/update"
-
-  get "comments/delete"
-
-  get "posts/index"
-
-  get "posts/show"
-
-  get "posts/new"
-
-  get "posts/create"
-
-  get "posts/edit"
-
-  get "posts/update"
-
-  get "posts/delete"
-
-  get "users/show"
-
-  get "users/edit"
-
-  get "static_pages/home"
-
-  get "static_pages/landing"
-
-  get "static_pages/about"
-
   devise_for :users
-
+  
+  match '/landing', to: "static_pages#landing"
+  match 'about',    to: "static_pages#about"
+  
+  resources   :users
+  resources   :comments
+  resources   :posts
+  
   root :to => 'static_pages#home'
   
   
