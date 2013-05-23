@@ -14,15 +14,22 @@ class PostsController < ApplicationController
   def create
     @post = current_user.posts.build(params[:post])
     @post.save
-    redirect_to posts_path
+    redirect_to @post
   end
 
   def edit
+    @post = Post.find(params[:id])
   end
 
   def update
+    @post = Post.find(params[:id])
+    @post.update_attributes(params[:post])
+    redirect_to @post
   end
 
-  def delete
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    redirect_to posts_path
   end
 end
