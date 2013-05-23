@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(:version => 20130523185757) do
     t.integer  "user_id"
     t.string   "title"
     t.text     "body"
-    t.boolean  "comments",   :default => true
+    t.boolean  "commenting", :default => true
     t.datetime "created_at",                   :null => false
     t.datetime "updated_at",                   :null => false
   end

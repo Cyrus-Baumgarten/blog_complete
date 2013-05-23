@@ -4,7 +4,7 @@ class CreatePosts < ActiveRecord::Migration
       t.integer :user_id
       t.string :title
       t.text :body
-      t.boolean :comments, default: true
+      t.boolean :commenting, default: true
 
       t.timestamps
     end

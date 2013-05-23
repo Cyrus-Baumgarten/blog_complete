@@ -18,7 +18,7 @@ Showing Post
 <% @comments.each do |comment| %>
 	<p>
 		<%= comment.body %><br>
-		Posted by:<%= comment.user.name %>
+		Posted by:<%= comment.user.email %>
 	</p>
 <% end %>
 
