@@ -10,12 +10,12 @@
 		<%= f.label :body %>
 		<br>
 		<%= f.text_area :body %>
-		<!-- <br>
+		<br>
 		Allow Comments?
-		<%= f.radio_button :comments, 1, :checked => true %> 
-		<%= label :comments_true, 'Yes' %>
-		<%= f.radio_button :comments, 0 %>
-		<%= label :comments, 'No' %> -->
+		<%= f.radio_button :commenting, true, :checked => true %> 
+		<%= label :commenting_true, 'Yes' %>
+		<%= f.radio_button :commenting, false %>
+		<%= label :commenting_false, 'No' %>
 		<br>
 		<%= f.submit "Create Post" %>
 	<% end %>

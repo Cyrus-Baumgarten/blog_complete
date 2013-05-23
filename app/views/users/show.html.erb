@@ -8,7 +8,9 @@
 
 <p> Subscribed? <%= @user.subscribe.to_s %></p>
 
+<% if current_user.admin? %>
 <%= link_to 'Admin Delete', @user, method: :delete%>
+<% end %>
 
 <h1>Users#show</h1>
 <p>Find me in app/views/users/show.html.erb</p>
