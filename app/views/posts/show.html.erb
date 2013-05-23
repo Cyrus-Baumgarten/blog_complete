@@ -14,5 +14,22 @@ Showing Post
 <% end %>
 
 
+<p>Comments for this article:</p>
+<% @comments.each do |comment| %>
+	<p>
+		<%= comment.body %><br>
+		Posted by:<%= comment.user.name %>
+	</p>
+<% end %>
+
+<p>
+	<%= form_for @comment do |f| %> 
+	<%= f.hidden_field :post_id, value: @post.id %>
+	<%= f.label :body, "Post Comment" %>
+	<%= f.text_field :body %>
+	<%= f.submit "Submit Comment"%>
+	<% end %>
+</p>
+
 <h1>Posts#show</h1>
 <p>Find me in app/views/posts/show.html.erb</p>
