@@ -18,7 +18,9 @@ Showing Post
 <% @comments.each do |comment| %>
 	<p>
 		<%= comment.body %><br>
-		Posted by:<%= comment.user.email %>
+		Posted by:<%= comment.user.email %> - 
+		<%= link_to 'Edit', edit_comment_path(comment) %> - 
+		<%= link_to 'Delete', comment, method: :delete %>
 	</p>
 <% end %>
 
