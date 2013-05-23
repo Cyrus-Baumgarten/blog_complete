@@ -6,8 +6,12 @@ Showing Post
 	
 <p>Post Text: <%= @post.body %></p>
 
-<p><%= link_to "Edit", edit_post_path(@post)%> 
-	<%= link_to "Delete", @post, method: :delete %></p>
+<% if user_signed_in? and current_user.admin? %>
+	<p>
+		<%= link_to "Edit", edit_post_path(@post)%> 
+		<%= link_to "Delete", @post, method: :delete %>
+	</p>
+<% end %>
 
 
 <h1>Posts#show</h1>

@@ -1,4 +1,7 @@
 class PostsController < ApplicationController
+  
+  before_filter :authenticate_user!, only: [ :new, :create, :edit, :update, :destroy ]
+  
   def index
     @posts = Post.all
   end
@@ -8,28 +11,53 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = current_user.posts.build
+    if user_signed_in? and current_user.admin?
+      @post = current_user.posts.build
+    else
+      flash[:error] = "You are not authorized to do that"
+      redirect_to root_path
+    end
   end
 
   def create
-    @post = current_user.posts.build(params[:post])
-    @post.save
-    redirect_to @post
+    if user_signed_in? and current_user.admin?
+      @post = current_user.posts.build(params[:post])
+      @post.save
+      redirect_to @post
+    else
+      flash[:error] = "You are not authorized to do that"
+      redirect_to root_path
+    end
   end
 
   def edit
-    @post = Post.find(params[:id])
+    if user_signed_in? and current_user.admin?
+      @post = Post.find(params[:id])
+    else
+      flash[:error] = "You are not authorized to do that"
+      redirect_to root_path
+    end
   end
 
   def update
-    @post = Post.find(params[:id])
-    @post.update_attributes(params[:post])
-    redirect_to @post
+    if user_signed_in? and current_user.admin?
+      @post = Post.find(params[:id])
+      @post.update_attributes(params[:post])
+      redirect_to @post
+    else
+      flash[:error] = "You are not authorized to do that"
+      redirect_to root_path
+    end
   end
 
   def destroy
-    @post = Post.find(params[:id])
-    @post.destroy
-    redirect_to posts_path
+    if user_signed_in? and current_user.admin?
+      @post = Post.find(params[:id])
+      @post.destroy
+      redirect_to posts_path
+    else
+      flash[:error] = "You are not authorized to do that"
+      redirect_to root_path
+    end
   end
 end

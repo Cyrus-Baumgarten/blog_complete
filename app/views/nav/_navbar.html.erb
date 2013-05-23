@@ -1,2 +1,4 @@
 <%= link_to 'All Posts', 	posts_path %>
+<% if user_signed_in? and current_user.admin? %>
 <%= link_to 'New Post', 	new_post_path %>
+<% end %>
