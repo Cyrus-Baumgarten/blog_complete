@@ -11,3 +11,24 @@
  *= require_self
  *= require_tree .
  */
+
+.alert {
+	background-color: red;
+	color: white;
+	padding: 5px;
+	display:inline-block;
+}
+
+.success {
+	background-color: green;
+	color: white;
+	padding: 5px;
+	display:inline-block;
+}
+
+.notice {
+	background-color: red;
+	color: white;
+	padding: 5px;
+	display:inline-block;
+}
