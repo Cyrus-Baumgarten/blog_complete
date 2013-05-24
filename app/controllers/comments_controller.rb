@@ -6,8 +6,13 @@ class CommentsController < ApplicationController
     @post = Post.find(params[:comment][:post_id])
     @comment = @post.comments.build(body: params[:comment][:body])
     @comment.user = current_user
-    @comment.save
-    redirect_to @post
+    if @comment.save
+      flash[:success] = "Comment created!"
+      redirect_to @post
+    else
+      flash[:error] = "Comment is invalid"
+      redirect_to @post
+    end
   end
 
   def edit
@@ -21,8 +26,13 @@ class CommentsController < ApplicationController
   def update
     @comment = Comment.find(params[:id])
     if user_signed_in? and (current_user.admin? or current_user == @comment.user)
-      @comment.update_attributes(body: params[:comment][:body])
-      redirect_to post_path(@comment.post)
+      if @comment.update_attributes(body: params[:comment][:body])
+        flash[:success] = "Comment updated!"
+        redirect_to post_path(@comment.post)
+      else
+        flash.now[:error] = "Comment is invalid"
+        render 'edit'
+      end
     else
       flash[:error] = "You are not authorized to do that"
       redirect_to root_path

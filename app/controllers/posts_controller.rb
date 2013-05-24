@@ -24,8 +24,13 @@ class PostsController < ApplicationController
   def create
     if user_signed_in? and current_user.admin?
       @post = current_user.posts.build(params[:post])
-      @post.save
-      redirect_to @post
+      if @post.save
+        flash[:success] = "Post Created"
+        redirect_to @post
+      else
+        flash.now[:error] = "Post invalid"
+        render 'new'
+      end
     else
       flash[:error] = "You are not authorized to do that"
       redirect_to root_path
@@ -44,8 +49,14 @@ class PostsController < ApplicationController
   def update
     if user_signed_in? and current_user.admin?
       @post = Post.find(params[:id])
-      @post.update_attributes(params[:post])
-      redirect_to @post
+      
+      if @post.update_attributes(params[:post])
+        flash[:success] = "Post updated!"
+        redirect_to @post
+      else
+        flash.now[:error] = "Update is invalid"
+        render 'edit'
+      end
     else
       flash[:error] = "You are not authorized to do that"
       redirect_to root_path
