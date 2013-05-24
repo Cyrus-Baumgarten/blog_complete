@@ -1,17 +1,10 @@
+<%= render 	'devise/menu/registration_items' %>
+<%= render 	'devise/menu/login_items' %>
 <br>
 <%= link_to 'Home', root_path %>
 <%= link_to 'All Posts', 	posts_path %>
-<% if user_signed_in? and current_user.admin? %>
-<%= link_to 'New Post', 	new_post_path %>
-<% end %>
+<%= render 'nav/newpost' %>
 <br>
-<% if user_signed_in? %>
- Signed in as: <%= link_to current_user.email, user_path(current_user) %> - 
- <%= link_to 'Edit Profile', edit_user_path(current_user) %>
-<% end %>
+<%= render 'nav/editprofile' %>
 <br>
-<% if user_signed_in? and (current_user.anonymous? or current_user.name? == false) %>
- You are commenting as: Anonymous - <%= link_to 'Switch to Credited', toggle_path %>
-<% elsif user_signed_in? and current_user.name? and current_user.anonymous == false %>
- You are commenting as: <%= link_to current_user.name, user_path(current_user) %> - <%= link_to 'Switch to Anonymous', toggle_path %>
-<% end %>
+<%= render 'nav/behavior'%>

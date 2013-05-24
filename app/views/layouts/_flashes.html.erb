@@ -1,0 +1,6 @@
+<p>
+	<% if notice %> <div class="notice">	<%= notice %></div> <% end %>
+	<% if alert %> 	<div class="alert">		<%= alert %></div>	<% end %>
+	<% if flash[:error] %> <div class="alert"><%= flash[:error] %></div> <% end %>
+	<% if flash[:success] %> <div class="success"><%= flash[:success] %></div> <% end %>
+</p>

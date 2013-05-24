@@ -1,0 +1,5 @@
+<% if user_signed_in? and (current_user.anonymous? or current_user.name? == false) %>
+ You are commenting as: Anonymous - <%= link_to 'Switch to Credited', toggle_path %>
+<% elsif user_signed_in? and current_user.name? and current_user.anonymous == false %>
+ You are commenting as: <%= link_to current_user.name, user_path(current_user) %> - <%= link_to 'Switch to Anonymous', toggle_path %>
+<% end %>

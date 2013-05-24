@@ -1,12 +1,12 @@
-<p>Your Profile:</p>
+<% unless @user.anonymous? or @user.name? == false %>
+<p>View Profile:</p>
 
 <p> Username: <%= @user.name %></p>
-
-<p> Email: <%= @user.email %></p>
 
 <p> Anonymous? <%= @user.anonymous.to_s %></p>
 
 <p> Subscribed? <%= @user.subscribe.to_s %></p>
+<% end %>
 
 <% if current_user.admin? %>
 <%= link_to 'Admin Delete', @user, method: :delete%>
