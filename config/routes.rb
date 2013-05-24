@@ -4,6 +4,7 @@ Blog::Application.routes.draw do
   
   match '/landing', to: "static_pages#landing"
   match 'about',    to: "static_pages#about"
+  match '/toggle',  to: "users#toggle"
   
   resources   :users
   resources   :comments

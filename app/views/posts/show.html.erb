@@ -18,7 +18,15 @@ Showing Post
 <% @comments.each do |comment| %>
 	<p>
 		<%= comment.body %><br>
-		Posted by:<%= comment.user.email %>
+		
+		Posted by:
+		
+		<% if comment.user.anonymous? or comment.user.name? == false %>
+			Anonymous
+		<% else %>
+			<%= link_to comment.user.name, user_path(comment.user) %>
+		<% end %>
+		
     <% if user_signed_in? and (current_user.admin? or current_user == comment.user) %>
 		- <%= link_to 'Edit', edit_comment_path(comment) %> - 
 		<%= link_to 'Delete', comment, method: :delete %>
