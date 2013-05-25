@@ -1,3 +1,32 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#post-show{
+	padding-left:20px;
+	padding-right:20px;
+}
+
+#post-show-title{
+	text-align:center;
+	font-size:30px;
+}
+
+#post-show a:link{
+	color: #D14719;
+};
+#post-show a:visited{
+	color: #D14719;
+};
+
+#post-index-title{
+	font-size:20px;
+}
+
+#post-index-title a:link{
+	color:#D14719;
+}
+
+#post-index-title a:visited{
+	color:#D14719;
+}

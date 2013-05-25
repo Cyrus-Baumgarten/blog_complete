@@ -1,7 +1,14 @@
 <p>
-	<%= link_to post.title, post_path(post)%> 
+	<div id="post-index-title">
+	<%= link_to post.title, post_path(post)%>
+	</div>
+	<div id="post-index-preview">
+	<%= truncate(post.body, length:200, separator:' ') %>
+	</div>
 	<% if user_signed_in? and current_user.admin? %>
+	<div class="admin-item">
 	<%= link_to "Edit", edit_post_path(post)%>
 	<%= link_to "Delete", post, method: :delete %>
+	</div>
 	<% end %>
 </p>

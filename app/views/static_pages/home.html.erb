@@ -1,12 +1,13 @@
 <% if Post.any? %>
 
+<div class="universal-title">
 <p>Latest Article</p>
+</div>
 
-<p><%= link_to @post.title, post_path(@post) %></p>
+<div id="home-page-link-title">
+	<p><%= link_to @post.title, post_path(@post) %></p>
+</div>
 
 <p><%= @post.body %></p>
 
 <% end %>
-
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>

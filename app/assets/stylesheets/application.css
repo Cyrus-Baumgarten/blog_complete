@@ -20,6 +20,27 @@ body{
 	background-color: #59595A;	
 }
 
+.universal-title{
+	color:white !important;
+	font-size:30px;
+	text-align:center;
+}
+
+.admin-item{
+	padding:3px;
+	border: 3px solid white;
+	color:white;
+	background-color:red;
+	font-weight:bold;
+	display:inline-block;
+}
+.admin-item a:link{
+	color:white !important;
+}
+.admin-item a:visited{
+	color:white !important;
+}
+
 #navbar-full-width{
 	border-bottom:1px solid white;
 	height: 90px;
@@ -88,7 +109,7 @@ body{
 }
 
 #logoorange{
-	color: #FF5C33;
+	color: #D14719;
 }
 
 #inner-body{
@@ -101,9 +122,9 @@ body{
 #inner-body-left-side{
 	background-color: #59595A;
 	color:white;
-	padding:10px;
+	padding:40px;
 	padding-top:80px;
-	width:779px;
+	width:719px;
 	border:1px solid white;	
 	display:inline-block;	
 }
@@ -112,7 +133,7 @@ body{
 	padding:10px;
 	margin-top:70px;
 	overflow-y:scroll;
-	background-color:#FF5C33;
+	background-color:#D14719;
 	width:179px;
 	border-right: 1px solid white;
 	border-bottom: 1px solid white;
@@ -126,15 +147,17 @@ body{
 	font-weight:600;
 }
 #feedtitle a:link{
-	color:#303031;
+	color:black;
 }
 #feedtitle a:visited{
-	color:#303031;
+	color:black;
 }
 
 #feedbody{
+	color: #303031;
 	font-size:14px;
 }
+
 
 #button7{
 	margin:auto;
@@ -148,6 +171,24 @@ body{
 	margin-left:-10px;
 }
 
+#button7 a{
+	color:black;
+	text-decoration:none;
+}
+#button7 a:hover{
+	text-decoration:underline;
+}
+
+#button8 a{
+	color:black;
+	text-decoration:none;
+}
+#button8 a:hover{
+	text-decoration:underline;
+}
+
+
+
 #button8{
 	margin:auto;
 	font-weight: 600;
@@ -158,6 +199,7 @@ body{
 	width:191px;
 	background-color:#CECFCF;
 	margin-left:-10px;
+	text-decoration: none;
 }
 
 #footer{
@@ -179,22 +221,19 @@ body{
 }
 
 .alert {
-	background-color: red;
+	background-color: #D14719;
 	color: white;
 	padding: 5px;
-	display:inline-block;
 }
 
 .success {
-	background-color: green;
+	background-color: #0066CC;
 	color: white;
 	padding: 5px;
-	display:inline-block;
 }
 
 .notice {
-	background-color: green;
+	background-color: #0066CC;
 	color: white;
 	padding: 5px;
-	display:inline-block;
 }

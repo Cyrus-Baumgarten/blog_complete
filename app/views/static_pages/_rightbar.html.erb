@@ -1,0 +1,27 @@
+<div id="inner-body-right-side"><!-- supplemental page content, inner body div 2 of 2 -->
+	<div id="stories-feed"><!--feed of latest stories with trunicated preview-->
+		
+		<% feed = Post.limit(1).order('created_at desc') %>
+		<% feed.each do |post| %>
+		<p>
+			<span id="feedtitle"><%= link_to post.title, post_path(post) %></span><br>
+			<span id="feedbody"><%= truncate(post.body, length:100, separator:' ') %></span>
+		</p>
+		<% end %>
+		
+		<div id="stories-button"><!--stories button floating over content-->
+				<div id="button7"><%= link_to 'ALL', posts_path %></div>
+				<div id="button8"><%= link_to 'STORIES', posts_path %></div>
+		</div><!-- id="stories-button" -->
+		
+		
+		<% feed2 = Post.limit(7).order('created_at desc').offset(1) %>
+		<% feed2.each do |post| %>
+		<p>
+			<span id="feedtitle"><%= link_to post.title, post_path(post) %></span><br>
+			<span id="feedbody"><%= truncate(post.body, length:80, separator:' ') %></span>
+		</p>
+		<% end %>
+		
+	</div><!-- id="stories-feed" -->
+</div><!-- id="inner-body-right-side" -->

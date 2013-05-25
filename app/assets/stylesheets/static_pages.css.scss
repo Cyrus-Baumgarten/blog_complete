@@ -1,3 +1,16 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#home-page-link-title{
+	text-align:center;
+	font-size:30px;
+}
+
+#home-page-link-title a:link{
+	color: #D14719;
+}
+
+#home-page-link-title a:visited{
+	color: #D14719;
+}
