@@ -6,7 +6,7 @@
 	<% if comment.user.anonymous? or comment.user.name? == false %>
 		Anonymous
 	<% else %>
-		<%= link_to comment.user.name, user_path(comment.user) %>
+		<%= comment.user.name %>
 	<% end %>
 	
   <% if user_signed_in? and (current_user.admin? or current_user == comment.user) %>

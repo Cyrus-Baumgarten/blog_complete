@@ -1,3 +1,25 @@
 <div id="footer"><!--footer stretching width of inner body-->
-	<%= render	'nav/navbar' %>
+	<div id="sitemap">
+		<table>
+			<tr>
+				<td><%= link_to 'All Posts', 	posts_path %></td>
+				<td class="pullright"><%= render 'nav/behavior'%></td>
+			</tr>
+	
+			<tr>
+				<td><%= render 'devise/menu/login_items' %></td>
+				<td class="pullright"><%= link_to 'About This Blog' %></td>
+			</tr>
+	
+			<tr>
+				<td><%= render 'devise/menu/registration_items' %></td>
+				<td class="pullright">Original Site Design by <a href=https://github.com/Cyrus-Baumgarten>Cyrus Baumgarten</a></td>
+			</tr>
+		
+			<tr>
+				<td><%= render 'nav/editprofile' %></td>
+			</tr>
+		</table>
+	</div>
 </div><!-- id="footer" -->
+
