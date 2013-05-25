@@ -17,7 +17,7 @@
 }
 
 body{
-	background-color: #0066CC;
+	background-color: #5C9DDE;
 }
 
 #navbar-full-width{
@@ -68,6 +68,7 @@ body{
 }
 
 .navcluster{
+	border-right:1px solid white;
 	font-weight: 600;
 	text-align: center;
 	padding:4px;
@@ -93,16 +94,70 @@ body{
 #inner-body{
 	color:white;
 	width:1000px;
-	margin:auto;
+	margin:auto;	
 }
 
 #inner-body-left-side{
 	background-color: #696969;
 	padding:10px;
 	padding-top:80px;
-	width:778px;
-	border:1px solid white;
+	width:779px;
+	border:1px solid white;	
+	display:inline-block;	
 }
+
+#inner-body-right-side{
+	padding:10px;
+	margin-top:70px;
+	overflow-y:scroll;
+	background-color:#FF5C33;
+	width:179px;
+	border-right: 1px solid white;
+	border-bottom: 1px solid white;
+	display:inline-block;
+	height:500px;
+	position:fixed;
+}
+
+#feedtitle{
+	font-size:16px;
+	font-weight:600;
+}
+#feedtitle a:link{
+	color:#303031;
+}
+#feedtitle a:visited{
+	color:#303031;
+}
+
+#feedbody{
+	font-size:14px;
+}
+
+#button7{
+	margin:auto;
+	font-weight: 600;
+	color:black;
+	text-align: center;
+	padding:4px;
+	height:22px;
+	width:191px;
+	background-color:#A5A6A6;
+	margin-left:-10px;
+}
+
+#button8{
+	margin:auto;
+	font-weight: 600;
+	color:black;
+	text-align: center;
+	padding:4px;
+	height:22px;
+	width:191px;
+	background-color:#CECFCF;
+	margin-left:-10px;
+}
+
 
 .alert {
 	background-color: red;
