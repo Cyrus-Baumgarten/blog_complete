@@ -11,17 +11,17 @@ Showing Post
 	</p>
 <% end %>
 
-<p>Comments for this article:</p>
-<%= render @comments %>
-
 <p>
 	<%= form_for @comment do |f| %> 
+	Comments:
 	<%= f.hidden_field :post_id, value: @post.id %>
-	<%= f.label :body, "Post Comment" %>
-	<%= f.text_field :body %>
-	<%= f.submit "Submit Comment"%>
+	<%= f.text_field :body, placeholder: "Post Comment..." %>
+	<%= f.submit "Submit"%>
 	<% end %>
 </p>
+
+<%= render @comments %>
+
 
 <h1>Posts#show</h1>
 <p>Find me in app/views/posts/show.html.erb</p>

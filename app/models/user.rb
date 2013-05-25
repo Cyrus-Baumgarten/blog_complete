@@ -10,6 +10,8 @@ class User < ActiveRecord::Base
   attr_accessible :name, :anonymous, :image_url, :subscribe
   # attr_accessible :title, :body
   
+  validates :name, uniqueness: true
+  
   has_many :posts, dependent: :destroy
   has_many :comments, dependent: :destroy
 end

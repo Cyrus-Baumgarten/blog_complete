@@ -37,8 +37,13 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if current_user == @user or current_user.admin?
-      @user.update_attributes(params[:user])
-      redirect_to @user
+      if @user.update_attributes(params[:user])
+        flash[:success] = "Username updated"
+        redirect_to @user
+      else
+        flash.now[:error] = "Username is already taken"
+        render 'edit'
+      end
     else
       flash[:error] = "You are not authorized to do that"
       redirect_to root_path

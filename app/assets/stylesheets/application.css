@@ -12,6 +12,10 @@
  *= require_tree .
  */
 
+*{
+	font-family: Geneva, Verdana, sans-serif;
+}
+
 .alert {
 	background-color: red;
 	color: white;
