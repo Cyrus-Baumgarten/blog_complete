@@ -21,7 +21,7 @@ body{
 }
 
 #navbar-full-width{
-	border-bottom:1px solid #5C9DDE;
+	border-bottom:1px solid white;
 	height: 90px;
 	background-color: #303031;
 	position:fixed;
@@ -92,9 +92,16 @@ body{
 
 #inner-body{
 	color:white;
-	width:980px;
+	width:1000px;
 	margin:auto;
-	padding-top:100px;
+}
+
+#inner-body-left-side{
+	background-color: #696969;
+	padding:10px;
+	padding-top:80px;
+	width:778px;
+	border:1px solid white;
 }
 
 .alert {

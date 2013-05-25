@@ -38,8 +38,6 @@
 	<div id="background"> <!-- full width background image/color -->
 		
 		<div id="inner-body"><!--width constrained content in main body below navbar-->
-			<%= render	'nav/navbar' %>
-			<%= render 'layouts/flashes' %>
 			<div id="inner-body-left-side"><!-- view yeild content, inner body div 1 of 2 -->
 				<%= yield %>
 			</div><!-- id="inner-body-left-side" -->
@@ -53,6 +51,9 @@
 			
 			<div id="footer"><!--footer stretching width of inner body-->
 			</div><!-- id="footer" -->
+			
+			<%= render	'nav/navbar' %>
+			<%= render 'layouts/flashes' %>
 			
 		</div><!-- id="inner-body" -->
 		
