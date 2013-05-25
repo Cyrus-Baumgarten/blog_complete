@@ -7,14 +7,46 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<!-- new repo for styling -->
-	
 	<%= render	'nav/navbar' %>
 	<%= render 'layouts/flashes' %>
-	
-	
-
-<%= yield %>
-
+	<!-- new repo for styling -->
+	<div id="navbar-full-width"> <!-- fixed navbar stretching accross page -->
+		<div id="navbar-inner"> <!--navbar content constrained to fixed width -->
+			<div id="logo"> <!--logo pulled right, navbar-inner div 1 of 7-->
+			</div><!-- id="logo" -->
+			<div id="button-1"> <!--button pulled left, navbar-inner div 2 of 7-->
+			</div><!-- id="button-1" -->
+			<div id="button-2"> <!--button pulled left, navbar-inner div 3 of 7-->
+			</div><!-- id="button-2" -->
+			<div id="button-3"> <!--button pulled left, navbar-inner div 4 of 7-->
+			</div><!-- id="button-3" -->
+			<div id="button-4"> <!--button pulled left, navbar-inner div 5 of 7-->
+			</div><!-- id="button-4" -->
+			<div id="button-5"> <!--button pulled left, navbar-inner div 6 of 7-->
+			</div><!-- id="button-5" -->
+			<div id="button-6"> <!--button pulled left, navbar-inner div 7 of 7-->
+			</div><!-- id="button-6" -->
+		</div><!-- id="navbar-inner" -->
+	</div><!-- id="navbar-full-width" -->
+	<div id="background"> <!-- full width background image/color -->
+		<div id="inner-body"><!--width constrained content in main body below navbar-->
+		
+			<div id="inner-body-left-side"><!-- view yeild content, inner body div 1 of 2 -->
+				<%= yield %>
+			</div><!-- id="inner-body-left-side" -->
+			
+			<div id="inner-body-right-side"><!-- supplemental page content, inner body div 2 of 2 -->
+				<div id="stories-button"><!--stories button floating over content-->
+				</div><!-- id="stories-button" -->
+				<div id="stories-feed"><!--feed of latest stories with trunicated preview-->
+				</div><!-- id="stories-feed" -->
+			</div><!-- id="inner-body-right-side" -->
+			
+			<div id="footer"><!--footer stretching width of inner body-->
+			</div><!-- id="footer" -->
+			
+		</div><!-- id="inner-body" -->
+		
+	</div><!-- id="background" -->
 </body>
 </html>
