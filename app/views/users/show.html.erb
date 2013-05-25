@@ -1,4 +1,5 @@
-<% unless @user.anonymous? or @user.name? == false %>
+<% if current_user = @user or (@user.anonymous? == false and @user.name? == true) %>
+
 <p>View Profile:</p>
 
 <p> Username: <%= @user.name %></p>
