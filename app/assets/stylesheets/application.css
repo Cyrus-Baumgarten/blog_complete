@@ -17,7 +17,7 @@
 }
 
 body{
-	background-color: #5C9DDE;
+	background-color: #59595A;	
 }
 
 #navbar-full-width{
@@ -92,13 +92,15 @@ body{
 }
 
 #inner-body{
-	color:white;
+	background-color:#59595A;
 	width:1000px;
+	height:100%;
 	margin:auto;	
 }
 
 #inner-body-left-side{
-	background-color: #696969;
+	background-color: #59595A;
+	color:white;
 	padding:10px;
 	padding-top:80px;
 	width:779px;
@@ -158,6 +160,23 @@ body{
 	margin-left:-10px;
 }
 
+#footer{
+	background-color: #303031;
+	padding:10px;
+	padding-bottom:30px;
+	height:70px;
+	width:779px;
+	border-left:1px solid white;
+	border-right:1px solid white;
+	margin-bottom:-10px;
+	color:#59595A;
+}
+#footer a:link{
+	color:white;
+}
+#footer a:visited{
+	color:white;
+}
 
 .alert {
 	background-color: red;
