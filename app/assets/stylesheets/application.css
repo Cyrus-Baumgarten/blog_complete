@@ -53,6 +53,7 @@ body{
 }
 
 #navbar-inner{
+	overflow-x:inherit;
 	margin:auto;
 	padding:10px;
 	height:70px;
@@ -104,12 +105,41 @@ body{
 	font-size: 40px;
 }
 
-#logoblue{
+#logoblue1{
 	color: #0066CC;
 }
-
-#logoorange{
+#logoblue2{
+	color: #3385D6;
+}
+#logoblue3{
+	color: #5C9DDE;
+}
+#logoblue4{
+	color: #7DB1E5;
+}
+#logoblue5{
+	color: #97C1EA;
+}
+#logowhite1{
+	color: white;
+}
+#logowhite2{
+	color: white;
+}
+#logoorange5{
 	color: #D14719;
+}
+#logoorange4{
+	color: #DA6C47;
+}
+#logoorange3{
+	color: #E1896C;
+}
+#logoorange2{
+	color: #E7A189;
+}
+#logoorange1{
+	color: #ECB4A1;
 }
 
 #inner-body{
