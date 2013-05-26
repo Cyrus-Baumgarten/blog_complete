@@ -1,0 +1,84 @@
+#inner-body-right-side{
+	background-image:url('darkdenim3 copy 3.png');
+	background-repeat:repeat;
+	padding-left:10px;
+	padding-right:10px;
+	padding-bottom:20px;
+	margin-top:68px;
+	overflow-y:scroll;
+	background-color:#D14719;
+	width:179px;
+	border-right: 1px solid white;
+	border-left: 1px solid white;
+	display:inline-block;
+	height:88%;
+	position:fixed;
+}
+
+#feedtitle{
+	font-size:16px;
+	font-weight:600;
+}
+#feedtitle a:link{
+	color:#333333;
+}
+#feedtitle a:visited{
+	color:#333333;
+}
+
+#feedbody{
+	color: #303031;
+	font-size:14px;
+}
+
+
+#button7{
+	margin:auto;
+	font-weight: 400;
+	color:black;
+	text-align: center;
+	padding:4px;
+	height:22px;
+	width:191px;
+	background-image:url('darkdenim3 copy.png');
+	margin-left:-10px;
+}
+
+#button7 a{
+	color:white;
+	text-decoration:none;
+}
+#button7 a:hover{
+	text-decoration:underline;
+}
+
+#button7:hover{
+	background-image:none;
+	background-color:#1975D1;
+}
+
+#button8{
+	margin:auto;
+	font-weight: 400;
+	color:black;
+	text-align: center;
+	padding:4px;
+	height:22px;
+	width:191px;
+	background-image:url('darkdenim3 copy.png');
+	margin-left:-10px;
+	text-decoration: none;
+}
+
+#button8 a{
+	color:white;
+	text-decoration:none;
+}
+#button8 a:hover{
+	text-decoration:underline;
+}
+
+#button8:hover{
+	background-image:none;
+	background-color:#1975D1;
+}

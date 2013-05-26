@@ -1,0 +1,61 @@
+*{
+	font-family: Geneva, Verdana, sans-serif;
+}
+
+html{
+	height:100%;
+}
+
+body{
+	background-image:url('darkdenim3 copy.png');
+	background-repeat:repeat;
+	background-color: #59595A;
+	height: 100%;
+}
+
+#inner-body{
+	background-color:#59595A;
+	width:1000px;
+	min-height:100%;
+	margin:auto;
+	position:relative;
+}
+
+.universal-title{
+	color:white !important;
+	font-size:30px;
+	text-align:center;
+}
+
+.admin-item{
+	padding:3px;
+	border: 3px solid white;
+	color:white;
+	background-color:red;
+	font-weight:bold;
+	display:inline-block;
+}
+.admin-item a:link{
+	color:white !important;
+}
+.admin-item a:visited{
+	color:white !important;
+}
+
+.alert {
+	background-color: #D14719;
+	color: white;
+	padding: 5px;
+}
+
+.success {
+	background-color: #0066CC;
+	color: white;
+	padding: 5px;
+}
+
+.notice {
+	background-color: #0066CC;
+	color: white;
+	padding: 5px;
+}

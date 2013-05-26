@@ -1,0 +1,96 @@
+#navbar-full-width{
+	height: 65px;
+	position:fixed;
+	left:0;
+	right:0;
+	top:0;
+	z-index: +1;
+}
+
+#navbar-inner{
+	background-image:url('darkdenim3 copy.png');
+	background-repeat:repeat;
+	border-bottom: 1px solid white;
+	margin:auto;
+	padding:15px;
+	height:45px;
+	width:970px;
+	top:0;
+	bottom:0;
+}
+
+#button-1{
+	margin-left: 785px;
+	margin-top:-58px;
+	border-right:1px solid white;
+}
+
+#button-2{
+	margin-left: 785px;
+	border-right:1px solid white;
+}
+#button-3{
+	margin-left: 785px;
+	border-right:1px solid white;
+}
+#button-4{
+	margin-left: 585px;
+	margin-top:-67px;
+}
+#button-5{
+	margin-left: 585px;
+}
+#button-6{
+	margin-left: 585px;
+}
+
+.navcluster{
+	border-left:1px solid white;	
+	font-weight: 400;
+	text-align: center;
+	padding:1px;
+	height:20px;
+	width:197px;
+	color:white;
+}
+
+.navcluster:hover{
+	background-color:#1975D1;
+}
+.navcluster a{
+	text-decoration:none;
+}
+.navcluster a:link{
+	color:white;
+}
+.navcluster a:visited{
+	color:white;
+}
+.navcluster a:hover{
+	text-decoration:underline;
+}
+
+
+#logo{
+	display:inline-block;
+	font-weight: 800;
+	margin-top: -5px;
+	font-size: 40px;
+}
+
+#logo a {
+	text-decoration: none;
+}
+
+#logoblue{
+	color: white;
+}
+#logoorange{
+	color: #D14719;
+}
+#logowhite1{
+	color: #1975D1;
+}
+#logowhite2{
+	color: #1975D1;
+}
