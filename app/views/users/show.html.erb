@@ -1,11 +1,6 @@
-<% if current_user = @user or current_user.admin? %>
-
-<p>Your Username:</p> <%= @user.name %></p>
-
-<% end %>
-
 <% if current_user.admin? %>
-<div class="admin-item">
-	<%= link_to 'Admin Delete', @user, method: :delete%>
-</div>
+	<p>User:</p> <%= @user.name %></p>
+	<div class="admin-item">
+		<%= link_to 'Admin Delete', @user, method: :delete%>
+	</div>
 <% end %>

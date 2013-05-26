@@ -18,11 +18,9 @@ class UsersController < ApplicationController
   
   def show
     @user = User.find(params[:id]) 
-    unless current_user == @user or current_user.admin?
-      if @user.anonymous?
-        flash[:error] = "This users profile is private"
-        redirect_to root_path
-      end
+    unless current_user.admin?
+      flash[:error] = "You are not authorized to do that"
+      redirect_to root_path
     end
   end
 
@@ -39,7 +37,7 @@ class UsersController < ApplicationController
     if current_user == @user or current_user.admin?
       if @user.update_attributes(params[:user])
         flash[:success] = "Username updated"
-        redirect_to @user
+        redirect_to root_path
       else
         flash.now[:error] = "Username is already taken or too long"
         render 'edit'

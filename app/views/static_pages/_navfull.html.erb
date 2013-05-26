@@ -25,9 +25,9 @@
 		
 		<div id="button-5" class="navcluster"> <!--button pulled left, navbar-inner div 6 of 7-->
 			<% if current_user.anonymous? or current_user.name? == false %>
-				<%= link_to 'Anonymous', user_path(current_user) %>
+				Anonymous
 			<% elsif current_user.name? and current_user.anonymous == false %>
-				<%= link_to current_user.name, user_path(current_user) %>
+				<%= current_user.name %>
 			<% end %>
 		</div><!-- id="button-5" -->
 		
