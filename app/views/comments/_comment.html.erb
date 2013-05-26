@@ -1,21 +1,22 @@
-<p>
-	<%= comment.body %><br>
+<div id="comment-each">
+	<p>
+		<%= comment.body %><br>
 	
-	- Posted by:
+		- Posted by:
 	
-	<% if comment.user.anonymous? or comment.user.name? == false %>
-		Anonymous
-	<% else %>
-		<%= comment.user.name %>
-	<% end %>
-	
-  <% if user_signed_in? and (current_user.admin? or current_user == comment.user) %>
-	- <%= link_to 'Edit', edit_comment_path(comment) %> - 
-	<%= link_to 'Delete', comment, method: :delete %>
-		<% if current_user.admin? %>
-			- <%= link_to 'Admin view user', user_path(comment.user) %>
+		<% if comment.user.anonymous? or comment.user.name? == false %>
+			Anonymous
+		<% else %>
+			<%= comment.user.name %>
 		<% end %>
-			
-	<% end %>
 	
-</p>
+	  <% if user_signed_in? and (current_user.admin? or current_user == comment.user) %>
+		- <%= link_to 'Edit', edit_comment_path(comment) %> - 
+		<%= link_to 'Delete', comment, method: :delete %>
+			<% if current_user.admin? %>
+				- <%= link_to 'Admin view user', user_path(comment.user) %>
+			<% end %>
+			
+		<% end %>
+	</p>
+</div>
