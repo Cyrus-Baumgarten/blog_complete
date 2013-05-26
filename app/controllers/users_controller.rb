@@ -11,7 +11,7 @@ class UsersController < ApplicationController
       redirect_to edit_user_path(current_user)
     elsif current_user.anonymous == false
       current_user.update_attributes(anonymous: true)
-      flash[:success] = "Your comments and profile are now anonymous"
+      flash[:success] = "Your comments are now anonymous"
       redirect_to :back
     end
   end

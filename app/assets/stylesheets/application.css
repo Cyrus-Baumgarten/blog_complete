@@ -102,13 +102,11 @@ body{
 	height:20px;
 	width:197px;
 	color:white;
-	
 }
 
 .navcluster:hover{
-	background-color:#80B2E6;
+	background-color:#1975D1;
 }
-
 .navcluster a{
 	text-decoration:none;
 }
@@ -135,16 +133,16 @@ body{
 }
 
 #logoblue{
-	color: #1975D1;
+	color: white;
 }
 #logoorange{
 	color: #D14719;
 }
 #logowhite1{
-	color: white;
+	color: #1975D1;
 }
 #logowhite2{
-	color: white;
+	color: #1975D1;
 }
 
 
@@ -241,7 +239,7 @@ body{
 
 #button7:hover{
 	background-image:none;
-	background-color:#80B2E6;
+	background-color:#1975D1;
 }
 
 #button8{
@@ -267,7 +265,7 @@ body{
 
 #button8:hover{
 	background-image:none;
-	background-color:#80B2E6;
+	background-color:#1975D1;
 }
 
 #footer{
