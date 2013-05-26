@@ -9,7 +9,7 @@
 	</div>
 	<% end %>
 	<div id="post-show-body">
-		<p><%= @post.body %></p>
+		<p><%= @post.body.html_safe %></p>
 	</div>
 
 	<div id="comments-whole">

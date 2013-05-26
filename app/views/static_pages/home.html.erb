@@ -8,6 +8,6 @@
 	<p><%= link_to @post.title, post_path(@post) %></p>
 </div>
 
-<p><%= @post.body %></p>
+<p><%= @post.body.html_safe %></p>
 
 <% end %>
