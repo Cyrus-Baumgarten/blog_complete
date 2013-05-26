@@ -41,7 +41,7 @@ class UsersController < ApplicationController
         flash[:success] = "Username updated"
         redirect_to @user
       else
-        flash.now[:error] = "Username is already taken"
+        flash.now[:error] = "Username is already taken or too long"
         render 'edit'
       end
     else

@@ -1,4 +1,4 @@
-$(document).ready(function(){
+//$(document).ready(function(){
 	$('#button-1').hover(function(){
 	  $('#button-1').css("background-color","#D14719");
 	  },function(){
@@ -14,7 +14,7 @@ $(document).ready(function(){
 	$('#button-3').hover(function(){
 	  $('#button-3').css("background-color","#D14719");
 	  },function(){
-	  $('#button-3').css("background-color","#4D94DB");
+	  $('#button-3').css("background-color","clear");
 	});
 	
 	$('#button-4').hover(function(){
