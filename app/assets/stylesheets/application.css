@@ -16,8 +16,13 @@
 	font-family: Geneva, Verdana, sans-serif;
 }
 
+html{
+	height:100%;
+}
+
 body{
-	background-color: #59595A;	
+	background-color: #59595A;
+	height: 100%;
 }
 
 .universal-title{
@@ -42,7 +47,6 @@ body{
 }
 
 #navbar-full-width{
-	border-bottom:1px solid white;
 	height: 90px;
 	background-color: #303031;
 	position:fixed;
@@ -66,14 +70,17 @@ body{
 	background-color:#80B2E6;
 	margin-left: 790px;
 	margin-top:-70px;
+	border-right:1px solid white;
 }
 #button-2{
 	background-color:#66A3E0;
 	margin-left: 790px;
+	border-right:1px solid white;
 }
 #button-3{
 	background-color:#4D94DB;
 	margin-left: 790px;
+	border-right:1px solid white;
 }
 #button-4{
 	background-color:#0066CC;
@@ -90,12 +97,12 @@ body{
 }
 
 .navcluster{
-	border-right:1px solid white;
+	border-left:1px solid white;	
 	font-weight: 400;
 	text-align: center;
 	padding:4px;
 	height:22px;
-	width:192px;
+	width:191px;
 	color:white;
 }
 
@@ -163,8 +170,9 @@ body{
 #inner-body{
 	background-color:#59595A;
 	width:1000px;
-	height:100%;
-	margin:auto;	
+	min-height:100%;
+	margin:auto;
+	position:relative;
 }
 
 #inner-body-left-side{
@@ -173,9 +181,10 @@ body{
 	padding:40px;
 	padding-top:80px;
 	width:719px;
-	border:1px solid white;	
-	display:inline-block;	
-	min-height:348px;
+	border-left:1px solid white;	
+	border-bottom:1px solid white;	
+	display:inline-block;
+	min-height:1000px;
 }
 
 #inner-body-right-side{
@@ -185,9 +194,9 @@ body{
 	background-color:#D14719;
 	width:179px;
 	border-right: 1px solid white;
-	border-bottom: 1px solid white;
+	border-left: 1px solid white;
 	display:inline-block;
-	height:500px;
+	height:88%;
 	position:fixed;
 }
 
@@ -252,12 +261,9 @@ body{
 #footer{
 	background-color: #303031;
 	padding:10px;
-	padding-bottom:30px;
-	height:80px;
 	width:779px;
 	border-left:1px solid white;
 	border-right:1px solid white;
-	border-bottom:1px solid white;
 	margin-bottom:-10px;
 	color:#59595A;
 }
@@ -271,7 +277,7 @@ body{
 }
 
 #sitemap{
-	margin-left:70px;	
+	width:779px;
 }
 
 #sitemap a{

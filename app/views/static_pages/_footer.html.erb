@@ -1,25 +1,22 @@
 <div id="footer"><!--footer stretching width of inner body-->
-	<div id="sitemap">
-		<table>
+		<table id="sitemap">
 			<tr>
 				<td><%= link_to 'All Posts', 	posts_path %></td>
+				<td><%= render 'nav/editprofile' %></td>
 				<td class="pullright">Original Site Design by <a href=https://github.com/Cyrus-Baumgarten>Cyrus Baumgarten</a></td>
 			</tr>
 	
 			<tr>
 				<td><%= render 'devise/menu/login_items' %></td>
+				<td></td>
 				<td class="pullright"><%= link_to 'About This Blog', about_path %></td>
 			</tr>
 	
 			<tr>
 				<td><%= render 'devise/menu/registration_items' %></td>
+				<td></td>
 				<td class="pullright"><%= render 'nav/behavior'%></td>
 			</tr>
-		
-			<tr>
-				<td><%= render 'nav/editprofile' %></td>
-			</tr>
 		</table>
-	</div>
 </div><!-- id="footer" -->
 
