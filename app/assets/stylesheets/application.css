@@ -21,6 +21,8 @@ html{
 }
 
 body{
+	background-image:url('darkdenim3 copy.png');
+	background-repeat:repeat;
 	background-color: #59595A;
 	height: 100%;
 }
@@ -47,8 +49,8 @@ body{
 }
 
 #navbar-full-width{
+	
 	height: 90px;
-	background-color: #303031;
 	position:fixed;
 	left:0;
 	right:0;
@@ -57,7 +59,9 @@ body{
 }
 
 #navbar-inner{
-	overflow-x:inherit;
+	background-image:url('darkdenim3 copy.png');
+	background-repeat:repeat;
+	border-bottom: 1px solid white;
 	margin:auto;
 	padding:10px;
 	height:70px;
@@ -176,6 +180,8 @@ body{
 }
 
 #inner-body-left-side{
+	background-image:url('darkdenim3 copy 2.png');
+	background-repeat:repeat;
 	background-color: #59595A;
 	color:white;
 	padding:40px;
@@ -188,6 +194,8 @@ body{
 }
 
 #inner-body-right-side{
+	background-image:url('darkdenim3 copy 3.png');
+	background-repeat:repeat;
 	padding:10px;
 	margin-top:70px;
 	overflow-y:scroll;
@@ -259,11 +267,11 @@ body{
 }
 
 #footer{
+	background-image:url('darkdenim3 copy.png');
+	background-repeat:repeat;
 	background-color: #303031;
 	padding:10px;
 	width:779px;
-	border-left:1px solid white;
-	border-right:1px solid white;
 	margin-bottom:-10px;
 	color:#59595A;
 }
