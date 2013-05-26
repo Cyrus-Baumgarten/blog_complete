@@ -14,7 +14,7 @@ end
 group :test do
   gem 'capybara'
 end
-
+s
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -27,6 +27,8 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
 end
+
+gem 'pg'
 
 gem 'jquery-rails'
 
