@@ -1,1 +1,1 @@
-Welcome to my first complete rails app. I coded it top to bottom from scratch in 4 days after weeks of hello worlds, tutorials, and screencasts, and experiments.
+Welcome to my first complete rails app. I coded it top to bottom from scratch in 4 days after weeks of hello worlds, tutorials, screencasts, and experiments.
