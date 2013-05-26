@@ -175,6 +175,7 @@ body{
 	width:719px;
 	border:1px solid white;	
 	display:inline-block;	
+	min-height:348px;
 }
 
 #inner-body-right-side{

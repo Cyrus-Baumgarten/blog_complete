@@ -3,17 +3,17 @@
 		<table>
 			<tr>
 				<td><%= link_to 'All Posts', 	posts_path %></td>
-				<td class="pullright"><%= render 'nav/behavior'%></td>
+				<td class="pullright">Original Site Design by <a href=https://github.com/Cyrus-Baumgarten>Cyrus Baumgarten</a></td>
 			</tr>
 	
 			<tr>
 				<td><%= render 'devise/menu/login_items' %></td>
-				<td class="pullright"><%= link_to 'About This Blog' %></td>
+				<td class="pullright"><%= link_to 'About This Blog', about_path %></td>
 			</tr>
 	
 			<tr>
 				<td><%= render 'devise/menu/registration_items' %></td>
-				<td class="pullright">Original Site Design by <a href=https://github.com/Cyrus-Baumgarten>Cyrus Baumgarten</a></td>
+				<td class="pullright"><%= render 'nav/behavior'%></td>
 			</tr>
 		
 			<tr>
