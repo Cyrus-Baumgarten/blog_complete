@@ -7,7 +7,7 @@ class CommentsController < ApplicationController
     @comment = @post.comments.build(body: params[:comment][:body])
     @comment.user = current_user
     if @comment.save
-      @comments = Comment.all
+      @comments = @post.comments.all
       respond_with(:location => post_path(@post))
     else
       flash[:error] = "Comment is too long"
