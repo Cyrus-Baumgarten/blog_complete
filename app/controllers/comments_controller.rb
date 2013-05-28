@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  
+  respond_to :js
   before_filter :authenticate_user!, only: [ :create, :edit, :update, :destroy ]
   
   def create
@@ -7,8 +7,8 @@ class CommentsController < ApplicationController
     @comment = @post.comments.build(body: params[:comment][:body])
     @comment.user = current_user
     if @comment.save
-      flash[:success] = "Comment created!"
-      redirect_to @post
+      @comments = Comment.all
+      respond_with(:location => post_path(@post))
     else
       flash[:error] = "Comment is too long"
       redirect_to @post
@@ -43,8 +43,9 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
     if user_signed_in? and (current_user.admin? or current_user == @comment.user)
       @post = @comment.post
+      @comment_id = @comment.id
       @comment.destroy
-      redirect_to @post
+      respond_with(@comment_id, :location => post_path(@post))
     else
       flash[:error] = "You are not authorized to do that"
       redirect_to root_path

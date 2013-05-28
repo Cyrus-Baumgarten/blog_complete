@@ -19,7 +19,7 @@
 	<div id="comments-whole" style="display:none">
 		<div id="comment-form">
 			<p>
-				<%= form_for @comment do |f| %> 
+				<%= form_for @comment, remote: true do |f| %> 
 				<%= f.hidden_field :post_id, value: @post.id %>
 				<%= f.text_area :body, placeholder: "Post Comment..." %>
 				<%= f.submit "Submit"%>
