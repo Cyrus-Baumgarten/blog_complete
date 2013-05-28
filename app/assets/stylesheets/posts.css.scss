@@ -40,12 +40,36 @@ img{
 	margin-right: auto;
 }
 
+#comment-button{
+	text-align: center;
+	padding:5px;
+	background-image:url('darkdenim3 copy 3.png');
+	background-repeat:repeat;
+}
+
+textarea{
+	width:480px;
+	height:30px;
+	padding:10px;
+	background-color: #303031;
+	color:white;
+}
+
+
+#comment-button:hover{
+	background-image:none;
+	background-color:#1975D1;
+}
+
+#comment-form{
+	margin:auto;
+}
+
 #comments-whole{
-	border-top: 1px solid white;
 	padding-left:40px;
 	padding-right:40px;
 }
 
-#comment-each{
+.comment-each{
 	border-top: 1px solid white;
 }

@@ -10,7 +10,7 @@ class CommentsController < ApplicationController
       flash[:success] = "Comment created!"
       redirect_to @post
     else
-      flash[:error] = "Comment is invalid"
+      flash[:error] = "Comment is too long"
       redirect_to @post
     end
   end

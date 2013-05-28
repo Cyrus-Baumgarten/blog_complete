@@ -11,16 +11,21 @@
 	<div id="post-show-body">
 		<p><%= @post.body.html_safe %></p>
 	</div>
-
-	<div id="comments-whole">
-		<p>
-			<%= form_for @comment do |f| %> 
-			Comments:
-			<%= f.hidden_field :post_id, value: @post.id %>
-			<%= f.text_field :body, placeholder: "Post Comment..." %>
-			<%= f.submit "Submit"%>
-			<% end %>
-		</p>
+	
+	<div id="comment-button">
+		Show Comments
+	</div>
+	
+	<div id="comments-whole" style="display:none">
+		<div id="comment-form">
+			<p>
+				<%= form_for @comment do |f| %> 
+				<%= f.hidden_field :post_id, value: @post.id %>
+				<%= f.text_area :body, placeholder: "Post Comment..." %>
+				<%= f.submit "Submit"%>
+				<% end %>
+			</p>
+		</div>
 	
 		<div id="comments-feed">
 			<%= render @comments %>
